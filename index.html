@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <h1>Empezamos</h1>
+    <header class="header">
+        <img src="./assets/Logo_a.png">
+    </header>  
+    <main class="presentacion">   
+        <section class="section">
+            <div class="consulta">
+                <label class="consulta__label" id="labelTexto" onclick="mostrarInput()">Ingrese el texto aqui</label>
+                <textarea class="text_area" type='text' id='valorTexto' placeholder="...." style="display: none;"></textarea>
+            </div>                    
+            <div class="botones">      
+                <div class="informacion__botones">
+                    <label class="informacion__botones__label"><img src="./assets/exclamacion.png">Solo letras minúsculas y sin acentos</label>
+                </div>
+                <div class="botones_solos">
+                    <button class="botones__click" onclick="Encriptar()">Encriptar</button>
+                    <button class="botones__click" onclick="Desencriptar()">Desencriptar</button>                            
+                </div>
+            </div>            
+        </section>
+        <div class="rectangulo" id="outputText">
+            <img src="./assets/Muñeco.png">
+            <div class="rectangulo__parrafo">
+                <strong class="rectangulo__parrafo_strong">Ningún mensaje fue encontrado</strong>
+                <br>
+                <p class="rectangulo__parrafo">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <br>            
+        </div>   
+    </main>
+    
+    <footer class="footer">
+        <p>Desarrollado por Steven Ortega</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
+
