@@ -5,31 +5,20 @@ function mostrarInput() {
     inputTexto.focus();
 }
 
-
-function Encriptar(){
+function Encriptar() {
     let textoUsuario = document.getElementById('valorTexto').value;
-    let textoEcnriptado = textoUsuario
-    .replace(/e/g, "enter") // se utiliza metodo replace para reemplazar la cadena 
-    .replace(/i/g, "imes") // y la expresión regular g para hacer un reemplazo global
-    .replace(/a/g, "ai")
-    .replace(/o/g, "ober")
-    .replace(/u/g, "ufat");
+    let textoEncriptado = textoUsuario
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
     
-    //document.getElementById('outputText').innerText = textoEcnriptado;
-
     let outputDiv = document.getElementById('outputText');
 
-    if (textoEcnriptado.trim()) {
+    if (textoEncriptado.trim()) {
         outputDiv.innerHTML = `
-            <br>
-            <br>
-            <br>
-            <br>
-            <p id="textoResultado">${textoEcnriptado}</p>
-            <br>
-            <br>
-            <br>
-            <br>
+            <p id="textoResultado">${textoEncriptado}</p>
             <button class="botones__click" onclick="CopiarTexto()">Copiar</button>
         `;
     } else {
@@ -37,26 +26,17 @@ function Encriptar(){
     }
 }
 
-function CopiarTexto(){
-    // let copiaTexto = document.getElementById('outputText').innerText;
-    // navigator.clipboard.writeText(copiaTexto)
-    //     .then(() => {
-    //         //alert('Texto copiado al portapapeles');
-    //     })
-    //     .catch(err => {
-    //         console.error('Error al copiar el texto: ', err);
-    //     });
+function CopiarTexto() {
     let copiaTexto = document.getElementById('textoResultado').innerText;
     navigator.clipboard.writeText(copiaTexto)
         .then(() => {
-            //alert('Texto copiado al portapapeles');
+            // alert('Texto copiado al portapapeles');
         })
         .catch(err => {
             console.error('Error al copiar el texto: ', err);
         });
     
-    limpiarCaja()
-
+    limpiarCaja();
 }
 
 function Desencriptar() {    
@@ -68,20 +48,11 @@ function Desencriptar() {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-    // document.getElementById('outputText').innerText = textoDesencriptado;
     let outputDiv = document.getElementById('outputText');
 
     if (textoDesencriptado.trim()) {
         outputDiv.innerHTML = `
-            <br>
-            <br>
-            <br>
-            <br>
             <p id="textoResultado">${textoDesencriptado}</p>
-            <br>
-            <br>
-            <br>
-            <br>
             <button class="botones__click" onclick="CopiarTexto()">Copiar</button>
         `;
     } else {
@@ -89,6 +60,6 @@ function Desencriptar() {
     }
 }
 
-function limpiarCaja(){
-    document.querySelector('#valorTexto').value = '';    
+function limpiarCaja() {
+    document.getElementById('valorTexto').value = '';    
 }

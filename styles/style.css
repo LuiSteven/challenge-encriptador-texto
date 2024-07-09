@@ -85,13 +85,14 @@ body {
 }
 
 .rectangulo {
-    height: 500px;
+    height: auto;
     width: 100%;
     max-width: 400px;
     background: white;
     border-radius: 16px;
     text-align: center;
     margin: 20px auto;
+    padding: 20px;
 }
 
 .rectangulo__parrafo_strong {
@@ -111,18 +112,12 @@ body {
 
 .footer {
     background-color: var(--color-secundario);
-    padding: 20px;    
+    padding: 20px;
+    text-align: center;
     font-family: var(--fuente-inter);
     font-size: 20px;
     color: #CED4DA;
-    font-weight: 300;
-    display: flex;
-    align-items: center;    
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer__logo{    
+    font-weight: 400;
 }
 
 .text_area {
@@ -135,7 +130,7 @@ body {
     box-sizing: border-box;
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .presentacion {
         flex-direction: column;
