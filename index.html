@@ -8,7 +8,9 @@
 </head>
 <body>
     <header class="header">
-        <img src="./assets/Logo_a.png">
+        <a href="https://www.aluracursos.com/">
+            <img src="./assets/Logo_a.png" alt="Logo" >
+        </a>        
     </header>  
     <main class="presentacion">   
         <section class="section">
@@ -18,7 +20,7 @@
             </div>                    
             <div class="botones">      
                 <div class="informacion__botones">
-                    <label class="informacion__botones__label"><img src="./assets/exclamacion.png">Solo letras minúsculas y sin acentos</label>
+                    <label class="informacion__botones__label"><img src="./assets/exclamacion.png" alt="Exclamación">Solo letras minúsculas y sin acentos</label>
                 </div>
                 <div class="botones_solos">
                     <button class="botones__click" onclick="Encriptar()">Encriptar</button>
@@ -27,7 +29,7 @@
             </div>            
         </section>
         <div class="rectangulo" id="outputText">
-            <img src="./assets/Muñeco.png">
+            <img src="./assets/Muñeco.png" alt="Muñeco">
             <div class="rectangulo__parrafo">
                 <strong class="rectangulo__parrafo_strong">Ningún mensaje fue encontrado</strong>
                 <br>
@@ -38,9 +40,12 @@
     </main>
     
     <footer class="footer">
-        <p>Desarrollado por Steven Ortega</p>
+        <p class="footer__label">Desarrollado por Steven Ortega</p>
+        <div>
+            <a class="footer__logo" href="https://www.linkedin.com/in/steven-ortega-aa2598233/"><img src="./assets/linkedin.png"></a>
+            <a class="footer__logo" href="https://www.instagram.com/"><img src="./assets/instagram.png"></a>
+        </div>
     </footer>
     <script src="app.js"></script>
 </body>
 </html>
-
