@@ -19,6 +19,8 @@ function Encriptar() {
     if (textoEncriptado.trim()) {
         outputDiv.innerHTML = `
             <p id="textoResultado">${textoEncriptado}</p>
+            <br>
+            <br>
             <button class="botones__click" onclick="CopiarTexto()">Copiar</button>
         `;
     } else {
@@ -53,6 +55,8 @@ function Desencriptar() {
     if (textoDesencriptado.trim()) {
         outputDiv.innerHTML = `
             <p id="textoResultado">${textoDesencriptado}</p>
+            <br>
+            <br>
             <button class="botones__click" onclick="CopiarTexto()">Copiar</button>
         `;
     } else {
